@@ -4,31 +4,38 @@
     box-sizing: border-box;
     font-family: 'Arial';
     text-align: center;
+    background-color: #EAE2B7;
 }
 
 main {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "box0 . . . . . ."
+    "box0 . . . . . box5"
     ". . . box1 . . ."
     ". . . box2 . . ."
     ". . . box3 . . ."
+    ". . box6 . box7 . ."
     ". . . box4 . . .";
 }
 
 .navbar-top {
     grid-area: box0;
-    background-color: #9E9CFC;
     justify-self: start;
     align-self: start;
     margin: 15px;
 }
 
+.fahrenheit-celsius {
+    grid-area: box5;
+    justify-self: end;
+    align-self: start;
+    margin: 15px;
+}
+
 .timezone-section {
-    background-color: #FCDE9C;
     grid-area: box1;
     align-self: end;
     justify-self: center;
@@ -42,7 +49,6 @@ main {
 }
 
 .temperature-section {
-    background-color: #FFA552;
     grid-area: box2;
     align-self: center;
     justify-self: center;
@@ -51,10 +57,21 @@ main {
 }
 
 .table-section {
-    background-color: #BA5624;
     grid-area: box3;
     align-self: start;
     justify-self: center;
+}
+
+.sunrise-section {
+    grid-area: box6;
+    align-self: center;
+    justify-self: end;
+}
+
+.sunset-section {
+    grid-area: box7;
+    align-self: center;
+    justify-self: start;
 }
 
 .navbar-bottom {
@@ -72,4 +89,8 @@ li {
 a {
     color: black;
     text-decoration: none;
+}
+
+h3 {
+    font-style: italic;
 }

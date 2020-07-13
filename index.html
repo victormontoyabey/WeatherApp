@@ -4,6 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="style.css"/>
         <title>Weather App Grid</title>
+        <script src="script.js"></script>
+        <script src="date.format.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     </head>
     <body>
         <main>
@@ -11,43 +14,43 @@
                 <img src="https://image.flaticon.com/icons/svg/876/876207.svg" alt="top navigation bar" height="18px">
             </div>
             <div class="fahrenheit-celsius">
-                F &#176;/ C &#176;
+                <b>F &#176;</b> / C &#176;
             </div>
         <div class="timezone-section">
-            <h2>Montclair</h2>
-            <p>Sunday July 12th, 2020</p>
+            <h2 class="location-timezone">Montclair</h2>
+            <p class="today-date">Sunday July 12th, 2020</p>
         </div>
         <div class="temperature-section">
-            <h1>76&#176;</h1>
-            <img src="https://image.flaticon.com/icons/svg/3175/3175780.svg" alt="sunny weather icon" height="36px">
+            <h1 class="temperature-degree">76&#176;</h1>
+            <img src="https://image.flaticon.com/icons/svg/3175/3175780.svg" alt="weather icon" height="36px" id="weather-icons">
         </div>
         <div class="table-section">
             <table>
                 <tr>
                     <th>Humidity</th>
-                    <td>13%</td>
-                </tr>
-                <tr>
-                    <th>UV Index</th>
-                    <td>27%</td>
+                    <td class="humidity">13%</td>
                 </tr>
                 <tr>
                     <th>Wind Speed</th>
-                    <td>3.1 MPH</td>
+                    <td class="wind-speed">4 MPH</td>
                 </tr>
                 <tr>
-                    <th>Chance of Rain</th>
-                    <td>34%</td>
+                    <th>Visibility</th>
+                    <td class="visibility">13 Miles</td>
+                </tr>
+                <tr>
+                    <th>Pressure</th>
+                    <td class="pressure">25 in.</td>
                 </tr>
             </table>
         </div>
         <div class="sunrise-section">
             <h3>SUNRISE</h3>
-            <p>5:40 A.M.</p>
+            <p class="sunrise">5:40 A.M.</p>
         </div>
         <div class="sunset-section">
             <h3>SUNSET</h3>
-            <p>8:05 P.M.</p>
+            <p class="sunset">8:05 P.M.</p>
         </div>
         <div class="navbar-bottom">
             <img src="https://image.flaticon.com/icons/svg/892/892499.svg" alt="click for details" height="18px">

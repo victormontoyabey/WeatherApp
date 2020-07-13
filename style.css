@@ -37,7 +37,7 @@ main {
 
 .timezone-section {
     grid-area: box1;
-    align-self: end;
+    align-self: center;
     justify-self: center;
     display: flex;
     align-items: center;
@@ -62,15 +62,23 @@ main {
     justify-self: center;
 }
 
+.table-section th {
+    text-align: left;
+}
+
+.table-section td {
+    text-align: right;
+}
+
 .sunrise-section {
     grid-area: box6;
-    align-self: center;
+    align-self: end;
     justify-self: end;
 }
 
 .sunset-section {
     grid-area: box7;
-    align-self: center;
+    align-self: end;
     justify-self: start;
 }
 

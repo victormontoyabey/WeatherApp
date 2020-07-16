@@ -26,6 +26,26 @@ window.addEventListener('load', ()=> {
                 })
                 .then(data => {
                     console.log(data);
+
+                    // Set Sunrise 
+                    let sunriseDate = new Date(data.sys.sunrise * 1000);
+                    let sunriseHours = sunriseDate.getHours();
+                    let sunriseMinutes = sunriseDate.getMinutes();
+                    
+
+                    // Set Sunset 
+                    let sunsetDate = new Date(data.sys.sunset * 1000);
+                    let sunsetHours = sunsetDate.getHours();
+                    let sunsetMinutes = sunsetDate.getMinutes();
+
+                    // Add 0 Before Minutes if Less than 10
+
+                    if(sunsetMinutes.toString().length < 2)
+                    sunsetMinutes = "0" + sunsetMinutes
+
+                    if(sunriseMinutes.toString().length < 2)
+                    sunriseMinutes = "0" + sunsetMinutes 
+
                     // Set DOM Elements from the API 
                     locationTimeZone.textContent = data.name;
                     temperatureDegree.textContent = Math.round(data.main.temp);
@@ -34,8 +54,8 @@ window.addEventListener('load', ()=> {
                     windSpeed.textContent = data.wind.speed + ' MPH';
                     visibility.textContent = Math.round(data.visibility / 1609) + '+ Mi';
                     pressure.textContent = data.main.pressure + ' mb';
-                    sunrise.textContent = data.sys.sunrise;
-                    sunset.textContent = data.sys.sunset;
+                    sunrise.textContent = sunriseHours + ":" + sunriseMinutes + " A.M.";
+                    sunset.textContent = (sunsetHours - 12) + ":" + sunsetMinutes + " P.M.";
 
                     // Set Icon
                     let iconCode = data.weather[0].icon;
